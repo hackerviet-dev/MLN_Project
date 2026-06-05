@@ -131,7 +131,6 @@ const slides = [
   'Sản phẩm Web Explorer',
   'Minh bạch AI & Liêm chính',
   'Thảo luận & Phản biện',
-  'Image Sources',
 ].map((title, index) => ({
   title,
   image: `/slide-assets/page-${String(index + 1).padStart(2, '0')}-image-01.jpg`,
@@ -580,7 +579,7 @@ function App() {
       <section className="section-band slide-gallery" id="slide-goc">
         <div className="section-heading">
           <p className="eyebrow">Slide gốc</p>
-          <h2>13 trang từ bản thuyết trình</h2>
+          <h2>12 trang từ bản thuyết trình</h2>
         </div>
         <div className="slides-grid">
           {slides.map((slide, index) => (
