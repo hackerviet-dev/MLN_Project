@@ -17,7 +17,6 @@ import {
   Gavel,
   Globe2,
   Heart,
-  Images,
   Palette,
   PanelTop,
   ShieldCheck,
@@ -39,7 +38,6 @@ const navItems = [
   { label: 'Lý luận', href: '#ly-luan' },
   { label: 'Kỷ nguyên số', href: '#ky-nguyen-so' },
   { label: 'Explorer', href: '#explorer' },
-  { label: 'Slide gốc', href: '#slide-goc' },
 ]
 
 const socialExistence = [
@@ -118,23 +116,7 @@ const aiIntegrity = [
 const ERA_ICONS = [Wheat, Factory, Bot]
 const eraSteps = ERA_DATA.map((era, i) => ({ ...era, icon: ERA_ICONS[i] }))
 
-const slides = [
-  'Trang bìa',
-  'Cơ sở lý luận Mác-Lênin',
-  'Cấu trúc tồn tại xã hội',
-  'Hình thái ý thức xã hội',
-  'Nguyên lý quyết định',
-  'Thực tiễn kỷ nguyên số',
-  'Sự chuyển dịch đời sống vật chất',
-  'Dẫn chứng tại Việt Nam',
-  'Tăng trưởng kinh tế số',
-  'Sản phẩm Web Explorer',
-  'Minh bạch AI & Liêm chính',
-  'Thảo luận & Phản biện',
-].map((title, index) => ({
-  title,
-  image: `/slide-assets/page-${String(index + 1).padStart(2, '0')}-image-01.jpg`,
-}))
+
 
 const chartPoints = [
   { label: '2022', value: 18 },
@@ -209,10 +191,6 @@ function App() {
             <a className="primary-link" href="#explorer">
               <SlidersHorizontal aria-hidden="true" />
               Material Footprint Explorer
-            </a>
-            <a className="ghost-link" href="#slide-goc">
-              <Images aria-hidden="true" />
-              Xem slide gốc
             </a>
           </div>
         </div>
@@ -576,22 +554,7 @@ function App() {
         </div>
       </section>
 
-      <section className="section-band slide-gallery" id="slide-goc">
-        <div className="section-heading">
-          <p className="eyebrow">Slide gốc</p>
-          <h2>12 trang từ bản thuyết trình</h2>
-        </div>
-        <div className="slides-grid">
-          {slides.map((slide, index) => (
-            <a href={slide.image} className="slide-tile" key={slide.image}>
-              <img src={slide.image} alt={`${slide.title} - slide ${index + 1}`} loading="lazy" />
-              <span>
-                {String(index + 1).padStart(2, '0')} · {slide.title}
-              </span>
-            </a>
-          ))}
-        </div>
-      </section>
+
 
       <section className="qa-section">
         <FileQuestion aria-hidden="true" />
