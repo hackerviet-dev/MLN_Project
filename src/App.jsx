@@ -76,17 +76,44 @@ const transitionRows = [
     criterion: 'Công cụ sản xuất',
     old: 'Con người, gia súc, công cụ thô sơ',
     now: 'Internet, dữ liệu lớn, trí tuệ nhân tạo',
+    example:
+      'Ví dụ: trước đây năng suất phụ thuộc vào sức người và mùa vụ; hiện nay một shop online có thể dùng sàn thương mại điện tử, chatbot và dữ liệu khách hàng để bán cho nhiều tỉnh thành cùng lúc.',
   },
   {
     criterion: 'Phương thức lao động',
     old: 'Cố định tại làng xã, cánh đồng',
     now: 'Linh hoạt, remote, gig economy',
+    example:
+      'Ví dụ: tài xế công nghệ, freelancer thiết kế, người bán hàng livestream hay nhân viên làm remote đều làm việc qua nền tảng số, nhận việc theo đơn, theo dự án hoặc theo thuật toán phân phối.',
   },
   {
     criterion: 'Ý thức xã hội',
     old: 'An phận, trọng lễ giáo, lệ làng',
     now: 'Năng động, cá nhân hóa, luật an ninh mạng',
+    example:
+      'Ví dụ: khi giao dịch, học tập và tranh luận chuyển lên mạng, xã hội bắt đầu coi trọng quyền riêng tư dữ liệu, văn minh bình luận, trách nhiệm khi chia sẻ tin giả và bảo vệ danh tính số.',
   },
+]
+
+const gigExamples = [
+  {
+    label: 'Tâm lý nghề nghiệp',
+    text: 'Người trẻ có xu hướng xem thu nhập như một danh mục linh hoạt: lương chính, chạy app, bán online, làm nội dung hoặc nhận dự án ngoài giờ.',
+  },
+  {
+    label: 'Quan hệ lao động',
+    text: 'Quan hệ chủ - thợ truyền thống chuyển một phần thành quan hệ nền tảng - đối tác - khách hàng, kéo theo câu hỏi về bảo hiểm, thuế và quyền lợi lao động.',
+  },
+  {
+    label: 'Chuẩn mực sống',
+    text: 'Tư duy “làm ở đâu cũng được” khiến việc đánh giá thành công bớt gắn với biên chế cố định, chuyển sang năng lực tự học, tốc độ thích nghi và trải nghiệm cá nhân.',
+  },
+]
+
+const digitalLawSignals = [
+  'Pháp luật: thương mại điện tử, định danh điện tử, bảo vệ dữ liệu cá nhân, an ninh mạng và nghĩa vụ thuế của hoạt động online.',
+  'Đạo đức: không phát tán tin giả, tôn trọng quyền riêng tư, minh bạch khi dùng AI và chịu trách nhiệm với nội dung đăng tải.',
+  'Tâm lý xã hội: người dùng quen với thanh toán không tiền mặt, đánh giá sao, phản hồi tức thời và yêu cầu dịch vụ cá nhân hóa.',
 ]
 
 const aiIntegrity = [
@@ -257,8 +284,10 @@ function App() {
           <p className="eyebrow">II. Thực tiễn kỷ nguyên số</p>
           <h2>Sự chuyển dịch đời sống vật chất</h2>
           <p>
-            Từ công cụ sản xuất đến phương thức lao động, nền kinh tế số làm thay đổi
-            cách con người tổ chức việc làm, giao tiếp, pháp luật và chuẩn mực đạo đức.
+            Trong quan điểm Mác-Lênin, đời sống vật chất không chỉ là “có gì để tiêu dùng”,
+            mà còn là cách xã hội sản xuất, phân phối, trao đổi và tổ chức lao động. Khi công
+            cụ sản xuất chuyển từ ruộng đất, máy móc sang dữ liệu, nền tảng số và AI, thì thói
+            quen làm việc, tâm lý nghề nghiệp, pháp luật và chuẩn mực đạo đức cũng biến đổi theo.
           </p>
         </div>
 
@@ -272,7 +301,10 @@ function App() {
             <div className="table-row" role="row" key={row.criterion}>
               <strong role="cell">{row.criterion}</strong>
               <span role="cell">{row.old}</span>
-              <span role="cell">{row.now}</span>
+              <span role="cell">
+                {row.now}
+                <small>{row.example}</small>
+              </span>
             </div>
           ))}
         </div>
@@ -282,17 +314,29 @@ function App() {
             <p className="eyebrow">Dẫn chứng tại Việt Nam</p>
             <h3>Kinh tế gig định hình tâm lý mới</h3>
             <p>
-              Sự bùng nổ của các nền tảng như Grab, Shopee đã tạo ra một thế hệ lao động tự do.
-              Giới trẻ không còn chỉ ưu tiên “ổn định biên chế”, mà đề cao tính linh hoạt
-              và trải nghiệm cá nhân.
+              Sự bùng nổ của Grab, Shopee, TikTok Shop, các sàn freelance và mô hình làm việc
+              từ xa tạo ra một kiểu lao động mới: kiếm việc qua ứng dụng, nhận đơn theo thời gian
+              thực, được đánh giá bằng dữ liệu và phải liên tục tự nâng kỹ năng.
             </p>
+            <div className="example-list">
+              {gigExamples.map((item) => (
+                <div key={item.label}>
+                  <strong>{item.label}</strong>
+                  <span>{item.text}</span>
+                </div>
+              ))}
+            </div>
             <img src="/slide-assets/page-08-image-01.jpg" alt="Slide dẫn chứng về lao động nền tảng tại Việt Nam" />
           </article>
 
           <article className="growth-card">
             <div>
               <p className="eyebrow">Tăng trưởng kinh tế số Việt Nam</p>
-              <h3>Quy mô tăng trưởng kéo theo đổi thay ý thức pháp luật số và đạo đức mạng.</h3>
+              <h3>Quy mô kinh tế số tăng lên kéo theo thay đổi trong pháp luật, đạo đức và tâm lý xã hội.</h3>
+              <p>
+                Khi mua bán, thanh toán, học tập, làm việc và giải trí diễn ra trên nền tảng số,
+                xã hội buộc phải hình thành các quy tắc mới để điều chỉnh hành vi trên không gian mạng.
+              </p>
             </div>
             <div className="line-chart" aria-label="Biểu đồ tăng trưởng kinh tế số từ 2022 đến 2025">
               <svg viewBox="0 0 520 260" role="img">
@@ -333,6 +377,14 @@ function App() {
                 })}
               </svg>
             </div>
+            <ul className="signal-list">
+              {digitalLawSignals.map((signal) => (
+                <li key={signal}>
+                  <Check aria-hidden="true" />
+                  <span>{signal}</span>
+                </li>
+              ))}
+            </ul>
           </article>
         </div>
       </section>

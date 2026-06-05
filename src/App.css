@@ -400,9 +400,21 @@ blockquote {
   color: var(--text);
 }
 
+.table-row small {
+  display: block;
+  margin-top: 10px;
+  color: #d7e8da;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
 .evidence-grid {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   margin-top: 18px;
+}
+
+.vietnam-case {
+  grid-column: 1 / -1;
 }
 
 .vietnam-case,
@@ -416,13 +428,43 @@ blockquote {
   margin-top: 24px;
   border: 1px solid rgba(216, 255, 135, 0.18);
   border-radius: 8px;
-  object-fit: cover;
+  background: #020302;
+  object-fit: contain;
+}
+
+.example-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.example-list div {
+  display: grid;
+  gap: 6px;
+  border: 1px solid rgba(216, 255, 135, 0.14);
+  border-radius: 8px;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.example-list strong {
+  color: var(--lime);
+  font-size: 0.92rem;
+}
+
+.example-list span {
+  color: #dce8de;
+  font-size: 0.94rem;
+  line-height: 1.65;
 }
 
 .growth-card {
+  grid-column: 1 / -1;
+  width: min(720px, 100%);
+  justify-self: center;
   display: grid;
   align-content: space-between;
-  min-height: 520px;
+  min-height: 640px;
   background:
     linear-gradient(135deg, rgba(54, 215, 208, 0.08), rgba(244, 90, 184, 0.06)),
     rgba(255, 255, 255, 0.045);
@@ -441,6 +483,31 @@ blockquote {
   fill: #dce8de;
   font-size: 18px;
   font-weight: 700;
+}
+
+.signal-list {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.signal-list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  color: #dce8de;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.signal-list svg {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  color: var(--lime);
 }
 
 .explorer-band {
