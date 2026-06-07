@@ -119,23 +119,38 @@ const digitalLawSignals = [
 const aiIntegrity = [
   {
     title: 'Công cụ sử dụng',
-    text: 'Gemini 1.5 Pro hỗ trợ cấu trúc logic, gợi ý code và tra cứu số liệu kinh tế.',
+    text: 'Gemini được dùng để hỗ trợ sắp xếp dàn ý, rà logic trình bày và gợi ý cách diễn đạt. Nội dung cuối cùng do nhóm tự biên tập và đối chiếu lại với tài liệu tham khảo.',
     icon: Bot,
   },
   {
-    title: 'Kiểm chứng',
-    text: 'Đối chiếu với Giáo trình Triết học Mác-Lênin và báo cáo Google/Temasek 2024.',
-    icon: ShieldCheck,
+    title: 'Nguồn lý luận chính thống',
+    text: 'Bộ Giáo dục và Đào tạo (2021), Giáo trình Triết học Mác - Lênin, NXB Chính trị Quốc gia Sự thật, Chương III - Chủ nghĩa duy vật lịch sử, Mục 3.4: Ý thức xã hội, trang 419-447.',
+    icon: BookOpen,
   },
   {
-    title: 'Cam kết',
-    text: 'Nhóm sinh viên trực tiếp biên tập, phản biện nội dung và thiết kế giao diện sản phẩm cuối cùng.',
+    title: 'Tư liệu số quốc tế',
+    text: 'Karl Marx & Friedrich Engels (1845), The German Ideology, bản điện tử lưu trữ tại Marxists Internet Archive: https://www.marxists.org.',
+    icon: Globe2,
+  },
+  {
+    title: 'Nguồn số liệu kinh tế',
+    text: 'Google, Temasek & Bain & Company (2024), e-Conomy SEA 2024 Report, dùng để tham chiếu quy mô kinh tế số Việt Nam trong biểu đồ: 30B USD, 36B USD và 45B USD.',
+    icon: Workflow,
+  },
+  {
+    title: 'Dẫn chứng kinh tế gig',
+    text: 'Dữ liệu thực tiễn về lao động phi chính thức và việc làm qua ứng dụng di động tại Việt Nam được đối chiếu với khảo sát của Tổng cục Thống kê (GSO) và Bộ Lao động - Thương binh và Xã hội.',
     icon: Users,
   },
   {
-    title: 'Nguồn tham khảo',
-    text: 'Marxists.org, English Reference và tài liệu giảng dạy ITU.',
-    icon: Workflow,
+    title: 'Cam kết',
+    text: 'Nhóm sinh viên trực tiếp chọn lọc dẫn chứng, kiểm tra độ phù hợp của số liệu, phản biện nội dung và thiết kế giao diện sản phẩm cuối cùng.',
+    icon: ShieldCheck,
+  },
+  {
+    title: 'Cách kiểm chứng',
+    text: 'Phần lý luận được đối chiếu với giáo trình; phần thực tiễn được đối chiếu với báo cáo kinh tế số và dữ liệu lao động nền tảng. Những câu diễn giải không lấy Gemini làm nguồn học thuật.',
+    icon: BadgeCheck,
   },
 ]
 
